@@ -1,9 +1,15 @@
+@font-face{
+  font-family: 'StarWars';
+  src: url('./Fonts/StarJedi-DGRW.ttf')
+}
+
 .App {
   text-align: center;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'StarWars', sans-serif;
 }
 .Header {
   color: #443e3e;
