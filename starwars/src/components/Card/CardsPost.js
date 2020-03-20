@@ -1,0 +1,32 @@
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import Card from "./Card.js"
+
+const CardsPosts = () => {
+    const [data, setData] = useState([]);
+    const [search, setSearch] = useState('');
+
+    useEffect( () => {
+        axios
+        .get(`https://swapi.co/api/people/`)
+        .then( response =>{
+            console.log(response.data.results, "RESULTS")
+           setData(response.data.results);
+        })
+        .catch(error => {
+            console.log("No data recieved", error)
+        });
+    },[])
+
+    return (
+        <div>
+            {data.map(element => {
+                return <Card data={element} key={element.name} />
+                {console.log(element,"IN MAP")}
+            })}
+        </div>
+    )
+
+};
+
+export default CardsPosts;
