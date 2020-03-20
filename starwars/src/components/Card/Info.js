@@ -16,7 +16,6 @@ const StyledInnerDiv = styled.div`
     p{
         margin:0;
         padding:0;
-        color:#FFE81F;
     }
 `
 const StyledP = styled.p`
@@ -28,13 +27,13 @@ margin:0;
 
     return (
         <Styleddiv>
-            <StyledInnerDiv><p>Gender:</p><StyledP>{props.gender}</StyledP></StyledInnerDiv>
-            <StyledInnerDiv><p>Birthday:</p><StyledP>{props.birth_year}</StyledP></StyledInnerDiv>
-            <StyledInnerDiv><p>Height:</p><StyledP>{props.height}</StyledP></StyledInnerDiv>
-            <StyledInnerDiv><p>Eye Color:</p><StyledP>{props.eye_color}</StyledP></StyledInnerDiv>
-            <StyledInnerDiv><p>Mass:</p><StyledP>{props.mass}kg</StyledP></StyledInnerDiv>
-            <StyledInnerDiv><p>Hair_color:</p><StyledP>{props.hair_color}</StyledP></StyledInnerDiv>
-            <StyledInnerDiv><p>Skin Color:</p><StyledP>{props.skin_color}</StyledP></StyledInnerDiv>
+            <StyledInnerDiv><p>Gender</p><StyledP>{props.gender}</StyledP></StyledInnerDiv>
+            <StyledInnerDiv><p>Birthday</p><StyledP>{props.birth_year}</StyledP></StyledInnerDiv>
+            <StyledInnerDiv><p>Height</p><StyledP>{props.height}</StyledP></StyledInnerDiv>
+            <StyledInnerDiv><p>Eye Color</p><StyledP>{props.eye_color}</StyledP></StyledInnerDiv>
+            <StyledInnerDiv><p>Mass</p><StyledP>{props.mass}kg</StyledP></StyledInnerDiv>
+            <StyledInnerDiv><p>Hair Color</p><StyledP>{props.hair_color}</StyledP></StyledInnerDiv>
+            <StyledInnerDiv><p>Skin Color</p><StyledP>{props.skin_color}</StyledP></StyledInnerDiv>
         </Styleddiv>
     );
 }
