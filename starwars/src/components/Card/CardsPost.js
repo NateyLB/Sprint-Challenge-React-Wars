@@ -23,6 +23,7 @@ const CardsPosts = () => {
             console.log("No data recieved", error)
         });
     },[search])
+
     if(search == ''){
         return (
             <div>
@@ -37,7 +38,8 @@ const CardsPosts = () => {
 
     else{
         return(
-        <div>
+        <div>   
+                <Form setSearch = {setSearch} />
                 <Card data={data} key={data.name} />
             </div>
         );

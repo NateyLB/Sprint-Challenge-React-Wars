@@ -3,6 +3,7 @@ import React from "react";
 
 const Form = (props) => { 
 const setSearch = props.setSearch;
+
     return(
 
         <form>
