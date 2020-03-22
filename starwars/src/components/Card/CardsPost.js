@@ -11,20 +11,13 @@ const CardsPosts = () => {
         axios
         .get(`https://swapi.co/api/people/${search}`)
         .then( response =>{
-            if(search == ''){
                 setData(response.data.results);
-            }
-            else{
-                setData(response.data);
-                
-            }
         })
         .catch(error => {
             console.log("No data recieved", error)
         });
     },[search])
 
-    if(search == ''){
         return (
             <div>
                 <Form setSearch = {setSearch} />
@@ -34,18 +27,6 @@ const CardsPosts = () => {
                 })}
             </div>
         );
-    }
-
-    else{
-        return(
-        <div>   
-                <Form setSearch = {setSearch} />
-                <Card data={data} key={data.name} />
-            </div>
-        );
-    }
-    
-
 };
 
 export default CardsPosts;

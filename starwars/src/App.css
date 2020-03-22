@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: StarWars;
+  /* font-family: StarWars; */
 }
 .Header {
   color: #443e3e;
