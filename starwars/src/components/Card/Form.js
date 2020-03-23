@@ -7,7 +7,7 @@ const setSearch = props.setSearch;
 function makeSearch (){
   const searchString = document.getElementById('input').value;
   const newSearchString = searchString.replace(/ /g,"+");
-  setSearch(`?search=${newSearchString}`);   
+  setSearch(`search=${newSearchString}&`);   
 }
 
     return(

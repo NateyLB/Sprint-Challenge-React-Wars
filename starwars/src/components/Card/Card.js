@@ -5,7 +5,6 @@ import Info from "./Info.js";
 
 const Card = (props) => { 
  const data = props;
- console.log(data.data,'from cards')
 
  const Styleddiv = styled.div`
  display:flex;
