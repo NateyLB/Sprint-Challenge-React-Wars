@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import styled from "styled-components";
 import Card from "./Card.js"
 import Form from './Form.js';
 import Prev from  './Prev.js';
@@ -14,6 +15,10 @@ const CardsPosts = () => {
     function MaxPage (){
         return Math.round(numberOfResults/10)
     }
+
+    const StyledH3 = styled.h3`
+    color:#FFE81F;
+    `;
 
     useEffect( () => {
         axios
@@ -30,14 +35,13 @@ const CardsPosts = () => {
         return (
             <div>
                 <Form setSearch = {setSearch} />
-                <h3>Number of Results: {numberOfResults}</h3>
                 {data.map(element => {
                     return <Card data={element} key={element.name} />
                     
                 })}
-                <h4>Page:{page} of {MaxPage()}</h4>
+                <StyledH3>Page: {page} of {MaxPage()}</StyledH3>
                 <Prev setPage={setPage} page={page} />
-                <Next setPage={setPage} page={page} />
+                <Next setPage={setPage} page={page} MaxPage={MaxPage} />
             </div>
         );
 };

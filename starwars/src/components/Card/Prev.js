@@ -6,8 +6,17 @@ const Prev = (props) => {
     `;
     const setPage = props.setPage
 
+    function setPreviousLimit (){
+        if(props.page <= 1){
+            setPage(1)
+        }
+        else{
+            setPage(props.page - 1)
+        }
+    }
+
     return (
-        <StyledButton onClick= {event => setPage(props.page - 1)}>Previous</StyledButton>
+        <StyledButton onClick= {event => setPreviousLimit()}>Previous</StyledButton>
     );
 }
 
